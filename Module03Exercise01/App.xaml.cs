@@ -28,7 +28,8 @@ namespace Module03Exercise01
             if (isConnected)
             {
                 //MainPage = new NavigationPage(new LoginPage());
-                MainPage = _serviceProvider.GetRequiredService<LoginPage>();
+                //MainPage = _serviceProvider.GetRequiredService<LoginPage>();
+                MainPage = new NavigationPage(_serviceProvider.GetRequiredService<LoginPage>());
 
                 Debug.WriteLine("Application Started (Online)");
             }
